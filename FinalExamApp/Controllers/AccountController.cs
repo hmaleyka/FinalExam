@@ -69,7 +69,7 @@ namespace FinalExamApp.Controllers
             var user = await _userManager.FindByEmailAsync(login.EmailOrUsername);
             if(user == null)
             {
-                await _userManager.FindByNameAsync(login.EmailOrUsername);
+               user =  await _userManager.FindByNameAsync(login.EmailOrUsername);
                 if(user is null)
                 {
                     ModelState.AddModelError("", "there is no such a username-email or password");

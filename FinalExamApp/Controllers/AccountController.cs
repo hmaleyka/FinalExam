@@ -1,8 +1,4 @@
-﻿using FinalExamApp.Helpers;
-using FinalExamApp.ViewModels.Account;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-
+﻿
 namespace FinalExamApp.Controllers
 {
     public class AccountController : Controller
@@ -72,7 +68,7 @@ namespace FinalExamApp.Controllers
                user =  await _userManager.FindByNameAsync(login.EmailOrUsername);
                 if(user is null)
                 {
-                    ModelState.AddModelError("", "there is no such a username-email or password");
+                    ModelState.AddModelError("", "a username-email or password is incorect");
                     return View();
                 }
             }
@@ -80,7 +76,7 @@ namespace FinalExamApp.Controllers
 
             if (!result.Succeeded)
             {
-                ModelState.AddModelError("", "there is no such a username-email or password");
+                ModelState.AddModelError("", "a username-email or password is incorect");
                 return View();
             }
 

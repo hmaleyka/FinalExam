@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
 
 namespace FinalExamApp.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [AutoValidateAntiforgeryToken]
     public class SettingController : Controller
     {
         private readonly AppDbContext _context;
@@ -11,12 +12,13 @@ namespace FinalExamApp.Areas.Manage.Controllers
         {
             _context = context;
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             List<Setting> settings= _context.setting.ToList();
             return View(settings);
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Update(int id)
         {
             Setting setting = _context.setting.FirstOrDefault(setting => setting.Id == id);
@@ -27,6 +29,7 @@ namespace FinalExamApp.Areas.Manage.Controllers
             };
             return View(vm);
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Update(UpdateSettingVM  settingvm)
         {

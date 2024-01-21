@@ -1,11 +1,4 @@
-﻿using FinalExamApp.Areas.Manage.ViewModels;
-using FinalExamApp.DAL;
-using FinalExamApp.Helpers;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Net.Http.Headers;
-
+﻿
 namespace FinalExamApp.Areas.Manage.Controllers
 {
     [Area("Manage")]

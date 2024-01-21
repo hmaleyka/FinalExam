@@ -7,3 +7,5 @@ global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.EntityFrameworkCore;
 global using FinalExamApp.Models.Common;
+global using FinalExamApp.ViewModels.Account;
+global using Microsoft.AspNetCore.Identity;

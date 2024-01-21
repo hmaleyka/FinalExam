@@ -47,6 +47,10 @@ namespace FinalExamApp.Areas.Manage.Controllers
         public IActionResult Delete(int Id)
         {
             var setting = _context.setting.FirstOrDefault(setting => setting.Id == Id);
+            if (setting == null)
+            {
+                return View();
+            }
             _context.Remove(setting);
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));

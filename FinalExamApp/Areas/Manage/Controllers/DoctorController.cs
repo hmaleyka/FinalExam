@@ -1,6 +1,7 @@
 ﻿using FinalExamApp.Areas.Manage.ViewModels;
 using FinalExamApp.DAL;
 using FinalExamApp.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net.Http.Headers;
@@ -8,6 +9,7 @@ using System.Net.Http.Headers;
 namespace FinalExamApp.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [AutoValidateAntiforgeryToken]
     public class DoctorController : Controller
     {
         private readonly AppDbContext _context;
@@ -18,21 +20,28 @@ namespace FinalExamApp.Areas.Manage.Controllers
             _context = context;
             _env = env;
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             List<Doctor> doctors = _context.doctors.ToList();
             return View(doctors);
         }
+        [Authorize(Roles ="Admin")]
         public IActionResult Create()
         {
             return View();
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Create(CreateDoctorVM doctorvm)
         {
             if (!ModelState.IsValid)
             {
+                return View();
+            }
+            if (!doctorvm.Image.CheckType("image/"))
+            {
+                ModelState.AddModelError("Image", "type should be image");
                 return View();
             }
             Doctor doctor = new Doctor()
@@ -45,7 +54,7 @@ namespace FinalExamApp.Areas.Manage.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update (int id)
         {
             Doctor doctor = await _context.doctors.Where(d => d.Id == id).FirstOrDefaultAsync();
@@ -58,6 +67,7 @@ namespace FinalExamApp.Areas.Manage.Controllers
             };
             return View(doctorvm);
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Update(UpdateDoctorVM doctorvm)
         {
@@ -66,6 +76,11 @@ namespace FinalExamApp.Areas.Manage.Controllers
                 return View();
             }
             Doctor doctor = await _context.doctors.FirstOrDefaultAsync(d => d.Id == doctorvm.Id);
+            if (!doctorvm.Image.CheckType("image/"))
+            {
+                ModelState.AddModelError("Image", "type hsould be image");
+                return View();
+            }
             doctor.Name = doctorvm.Name;
             doctor.Position = doctorvm.Position;
             doctor.ImgUrl = doctorvm.Image.Upload(_env.WebRootPath, @"\Upload\Doctor\");

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mfFH1XRDBzjUIlt8pWTBT6opKsbcJ9Z6ec1zODw4tmg=",
+  "Hash": "+jib1C2po/HygMS+3VmE6hyLkbPvKXi5Y1JKM3AoWd0=",
   "Source": "FinalExamApp",
   "BasePath": "_content/FinalExamApp",
   "Mode": "Default",
@@ -33745,6 +33745,57 @@
       "OriginalItemSpec": "wwwroot\\Upload\\Doctor\\248adba8-a8cc-48aa-8d43-8fe83d052868download (2).jpg"
     },
     {
+      "Identity": "C:\\Users\\II novbe\\Desktop\\LastSim\\FinalSim\\FinalExamApp\\FinalExamApp\\wwwroot\\Upload\\Doctor\\24de3d47-1105-4378-a7dd-597e88f1ccabdownload.jpg",
+      "SourceId": "FinalExamApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\II novbe\\Desktop\\LastSim\\FinalSim\\FinalExamApp\\FinalExamApp\\wwwroot\\",
+      "BasePath": "_content/FinalExamApp",
+      "RelativePath": "Upload/Doctor/24de3d47-1105-4378-a7dd-597e88f1ccabdownload.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Doctor\\24de3d47-1105-4378-a7dd-597e88f1ccabdownload.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\II novbe\\Desktop\\LastSim\\FinalSim\\FinalExamApp\\FinalExamApp\\wwwroot\\Upload\\Doctor\\3f3de425-0099-446b-8617-92d35a58f512download (3).jpg",
+      "SourceId": "FinalExamApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\II novbe\\Desktop\\LastSim\\FinalSim\\FinalExamApp\\FinalExamApp\\wwwroot\\",
+      "BasePath": "_content/FinalExamApp",
+      "RelativePath": "Upload/Doctor/3f3de425-0099-446b-8617-92d35a58f512download (3).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Doctor\\3f3de425-0099-446b-8617-92d35a58f512download (3).jpg"
+    },
+    {
+      "Identity": "C:\\Users\\II novbe\\Desktop\\LastSim\\FinalSim\\FinalExamApp\\FinalExamApp\\wwwroot\\Upload\\Doctor\\70fee80e-c908-4a1c-a416-0f598a4d9715download (2).jpg",
+      "SourceId": "FinalExamApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\II novbe\\Desktop\\LastSim\\FinalSim\\FinalExamApp\\FinalExamApp\\wwwroot\\",
+      "BasePath": "_content/FinalExamApp",
+      "RelativePath": "Upload/Doctor/70fee80e-c908-4a1c-a416-0f598a4d9715download (2).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Doctor\\70fee80e-c908-4a1c-a416-0f598a4d9715download (2).jpg"
+    },
+    {
       "Identity": "C:\\Users\\II novbe\\Desktop\\LastSim\\FinalSim\\FinalExamApp\\FinalExamApp\\wwwroot\\Upload\\Doctor\\cae27e63-a062-4479-9bf7-0788b9d09541download (1).jpg",
       "SourceId": "FinalExamApp",
       "SourceType": "Discovered",
@@ -33760,6 +33811,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\Doctor\\cae27e63-a062-4479-9bf7-0788b9d09541download (1).jpg"
+    },
+    {
+      "Identity": "C:\\Users\\II novbe\\Desktop\\LastSim\\FinalSim\\FinalExamApp\\FinalExamApp\\wwwroot\\Upload\\Doctor\\f9dbf48d-a780-4dbe-84c1-a58db2cf1f0ddownload (3).jpg",
+      "SourceId": "FinalExamApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\II novbe\\Desktop\\LastSim\\FinalSim\\FinalExamApp\\FinalExamApp\\wwwroot\\",
+      "BasePath": "_content/FinalExamApp",
+      "RelativePath": "Upload/Doctor/f9dbf48d-a780-4dbe-84c1-a58db2cf1f0ddownload (3).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Doctor\\f9dbf48d-a780-4dbe-84c1-a58db2cf1f0ddownload (3).jpg"
     }
   ]
 }

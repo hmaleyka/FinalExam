@@ -73,7 +73,21 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
+                @if(User.Identity.IsAuthenticated)
+                {
+                        <a style="color:black" >@User.Identity.Name</a>
+                        <a asp-controller="Account" asp-action="Logout" class="btn btn-primary">Logout</a>
+                        if(User.IsInRole("Admin"))
+                        {
+                            <a asp-area="Manage" asp-controller="Doctor" asp-action="Index" class="btn btn-danger" >Go to Admin Panel</a>
+                        }
+                }
+                else
+                {
+                        <a asp-controller="Account" asp-action="Register" class="btn btn-primary" >Register</a>
+                        
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-warning" >Login</a>
+                }
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">

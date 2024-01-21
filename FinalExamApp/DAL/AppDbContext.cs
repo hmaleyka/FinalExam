@@ -12,5 +12,6 @@ namespace FinalExamApp.DAL
 
         }
         public DbSet<Doctor> doctors { get; set; }
+        public DbSet<Setting> setting { get; set; }
     }
 }

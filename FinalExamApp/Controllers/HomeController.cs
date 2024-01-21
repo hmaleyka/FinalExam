@@ -19,7 +19,8 @@ namespace FinalExamApp.Controllers
         {
             HomeVM homevm = new HomeVM()
             {
-                doctors = _context.doctors.ToList()
+                doctors = _context.doctors.ToList(),
+                setting = _context.setting.ToList(),
             };
             return View(homevm);
         }

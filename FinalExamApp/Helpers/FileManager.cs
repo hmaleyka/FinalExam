@@ -8,6 +8,10 @@ namespace FinalExamApp.Helpers
         {
             return file.ContentType.Contains(type);
         }
+        public static bool CheckLong(this IFormFile file , int length)
+        {
+            return file.Length <= length;
+        }
         public static string Upload(this IFormFile file, string envpath, string foldername)
         {
             string filename = file.FileName;

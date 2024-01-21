@@ -37,6 +37,11 @@ namespace FinalExamApp.Areas.Manage.Controllers
                 ModelState.AddModelError("Image", "type should be image");
                 return View();
             }
+            if (!doctorvm.Image.CheckLong(2097152))
+            {
+                ModelState.AddModelError("Image", "type's length should not be large than 2 mb");
+                return View();
+            }
             Doctor doctor = new Doctor()
             {
                 Name = doctorvm.Name,
@@ -72,6 +77,11 @@ namespace FinalExamApp.Areas.Manage.Controllers
             if (!doctorvm.Image.CheckType("image/"))
             {
                 ModelState.AddModelError("Image", "type hsould be image");
+                return View();
+            }
+            if (!doctorvm.Image.CheckLong(2097152))
+            {
+                ModelState.AddModelError("Image", "type's length should not be large than 2 mb");
                 return View();
             }
             doctor.Name = doctorvm.Name;

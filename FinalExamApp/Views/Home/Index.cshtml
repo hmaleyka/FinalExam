@@ -1,4 +1,8 @@
-﻿  <!-- About Start -->
+﻿@using FinalExamApp.ViewModels
+@model HomeVM
+
+
+  <!-- About Start -->
 <div class="container-fluid about bg-light py-5">
     <div class="container py-5">
         <div class="row g-5 align-items-center">
@@ -177,10 +181,12 @@
             <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
         </div>
         <div class="row g-4 justify-content-center">
+            @foreach (var item in Model.doctors)
+            {
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item rounded">
                     <div class="team-img rounded-top h-100">
-                        <img src="~/img/team-1.jpg" class="img-fluid rounded-top w-100" alt="">
+                        <img src="~/Upload/Doctor/@item.ImgUrl" class="img-fluid rounded-top w-100" alt="">
                         <div class="team-icon d-flex justify-content-center">
                             <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -189,62 +195,14 @@
                         </div>
                     </div>
                     <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                        <h5>Full Name</h5>
-                        <p class="mb-0">Message Physio Therapist</p>
+                        <h5>@item.Name</h5>
+                        <p class="mb-0">@item.Position</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item rounded">
-                    <div class="team-img rounded-top h-100">
-                        <img src="~/img/team-2.jpg" class="img-fluid rounded-top w-100" alt="">
-                        <div class="team-icon d-flex justify-content-center">
-                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                        <h5>Full Name</h5>
-                        <p class="mb-0">Rehabilitation Therapist</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item rounded">
-                    <div class="team-img rounded-top h-100">
-                        <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="">
-                        <div class="team-icon d-flex justify-content-center">
-                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                        <h5>Full Name</h5>
-                        <p class="mb-0">Doctor of Physical therapy</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item rounded">
-                    <div class="team-img rounded-top h-100">
-                        <img src="~/img/team-4.jpg" class="img-fluid rounded-top w-100" alt="">
-                        <div class="team-icon d-flex justify-content-center">
-                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                        <h5>Full Name</h5>
-                        <p class="mb-0">Doctor of Physical therapy</p>
-                    </div>
-                </div>
-            </div>
+                
+            }
+           
         </div>
     </div>
 </div>
